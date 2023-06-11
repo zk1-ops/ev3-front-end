@@ -1,0 +1,15 @@
+body {
+    background-size: cover; 
+    background-image: url('../img/fondo.png');
+}
+
+.card.card-back {
+    background-color: rgba(0, 0, 0, 0.733);
+}
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: rgb(63 64 96 / 66%);
+    color: white;
+    display: block;
+  }
