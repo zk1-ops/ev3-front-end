@@ -293,10 +293,9 @@ function validar() {
     let http = pagWeb.indexOf("http://")
 
     if(pagWeb == ""){
-        div.innerText = "El campo pagina web es obligatorio";
-        input.className = "form-control is-invalid";
-        div.className = "text-danger";
-        return false;
+        div.innerText = "";
+        input.className = "form-control";
+        return true;
     }
     else if(https === 0 || http === 0) {
       console.log();
