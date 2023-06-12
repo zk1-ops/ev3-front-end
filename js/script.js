@@ -106,7 +106,7 @@ function validar() {
         return false;
     }else{
         if(password_original != password_confirmation){
-            div.innerText = "La contraseña de confirmacion no coinde con la contraseña anterior";
+            div.innerText = "La contraseña de confirmacion no coincide con la contraseña anterior";
             input.className = "form-control is-invalid";
             div.className = "text-danger";
             return false;
