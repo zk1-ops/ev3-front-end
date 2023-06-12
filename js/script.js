@@ -127,7 +127,7 @@ function validar() {
     let tieneDigito = false;
   
     for (let i = 0; i < password.length; i++) {
-      if (password[i] >= "a" && password[i] <= "z") {
+      if (password[i] >= "a" && password[i] <= "z" || password[i] >= "A" && password[i] <= "Z") {
         tieneLetra = true;
       }
       if (!isNaN(password[i])) {
