@@ -149,12 +149,12 @@ function validar() {
     let div = document.getElementById("err_password");
     let input = document.getElementById("password");
   
-    let tieneMayuscula = false;
+    let tieneLetra = false;
     let tieneDigito = false;
   
     for (let i = 0; i < password.length; i++) {
-      if (password[i] >= "A" && password[i] <= "Z") {
-        tieneMayuscula = true;
+      if (password[i] >= "a" && password[i] <= "z") {
+        tieneLetra = true;
       }
       if (!isNaN(password[i])) {
         tieneDigito = true;
@@ -172,8 +172,8 @@ function validar() {
       input.className = "form-control is-invalid";
       div.className = "text-danger";
       return false;
-    } else if (!tieneMayuscula) {
-      div.innerText = "La contraseña debe contener al menos una letra mayúscula.";
+    } else if (!tieneLetra) {
+      div.innerText = "La contraseña debe contener al menos una letra.";
       input.className = "form-control is-invalid";
       div.className = "text-danger";
       return false;
