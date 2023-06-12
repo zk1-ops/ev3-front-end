@@ -1,7 +1,6 @@
 const list_aficiones = [];
 
 function validar() {
-    let ret_nombre = validar_nombre();
     let ret_password = validar_password()
     let ret_confirm_pw = confirmar_contraseña()
     let ret_comuna = seleccionarComuna()
@@ -11,37 +10,12 @@ function validar() {
     //let ret_aficiones = agregaraficiones()
     let ret_pagweb = validarPagWeb()
     let ret_aficionesVal = validarAficion() 
-    return ret_nombre &&   ret_password &&  ret_confirm_pw &&
+    return  ret_password &&  ret_confirm_pw &&
     ret_comuna && ret_phone && ret_email && ret_aficionesVal && ret_direccion &&
     ret_pagweb;
  }
  
- function validar_nombre(){
-    let nombre = document.getElementById("nombre").value;
-    let div = document.getElementById("err_nombre");
-    let input = document.getElementById("nombre");
- 
- 
-    if(nombre == ""){
-         div.innerText = "El campo nombre es obligatorio";
-         input.className = "form-control is-invalid"
-         div.className = "text-danger"
-         return false;
-    }
-    else{
-     if(nombre.length > 30){
-         div.innerText = "Excedes el limite de caracteres MAXIMO: 30";
-         input.className = "form-control is-invalid"
-         div.className = "text-danger"
-         return false;
-     }
-     else{
-         div.innerText = "";
-         input.className = "form-control";
-         return true;
-      }
-    }
- }
+
 
  function validarCorreo() {
     let email = document.getElementById("email").value
